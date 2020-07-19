@@ -1,0 +1,57 @@
+.quotes {
+    
+    &-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 500px;
+
+        @include breakpoint(large) {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1320px;
+            gap: 40px;
+        }
+    }
+
+    .quote {
+        background-color: $testimonialBg;
+        padding: 30px 24px 24px 24px;
+        border-radius: 5px;
+
+        @include breakpoint(large) {
+            padding: 44px 24px 24px 24px;
+        }
+        
+        &_text {
+            font-size: 0.75em;
+            margin-bottom: 30px;
+        }
+
+        &_author {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            grid-template-rows: 20px 20px;
+            column-gap: 14px;
+            
+            &-image {
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 2;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 50%;
+                }
+            }
+
+            &-name {
+                font-size: .5em;
+                font-weight: 700;
+            }
+
+            &-title {
+                font-size: .5em;
+            }
+        }
+    }
+}

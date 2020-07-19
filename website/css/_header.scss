@@ -1,0 +1,40 @@
+header{
+    background-color: $introBg;
+
+    .container {
+        display: grid;
+        grid-template-columns:minmax(100px, 1fr) repeat(3, auto);
+        align-items: center;
+        grid-gap: 20px;
+        // background: #000;
+    
+
+            @include breakpoint (large){
+                grid-gap: 80px;
+             
+            }
+    }   
+     
+    img {
+        width: 83px;
+        cursor: pointer;
+
+        @include breakpoint(large){
+            width: 150px;
+        }
+    }
+
+    a {
+        font-size: 0.975rem;
+
+        @include breakpoint(large){
+            font-size: 1rem;
+
+        }
+        &:hover {
+            text-decoration: underline;
+            color: red;
+        }
+    }
+    
+}
