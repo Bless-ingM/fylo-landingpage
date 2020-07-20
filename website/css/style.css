@@ -35,6 +35,7 @@ a {
 
 h1, h2, h3 {
   font-family: "Raleway", sans-serif;
+  margin-top: 0;
 }
 
 .h2.small {
@@ -52,39 +53,6 @@ p {
 
 section {
   background-color: #181f2a;
-}
-
-button {
-  border: none;
-  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
-  background: linear-gradient(to right, #65e2d9, #339ecc);
-  font-size: 0.95em;
-  padding: 20px 40px;
-  width: 100%;
-  max-width: 285px;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#339ecc), to(#65e2d9));
-  background: linear-gradient(to right, #339ecc, #65e2d9);
-}
-
-.container, .container--small {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 25px 20px 100px 20px;
-}
-
-@media screen and (min-width: 999px) {
-  .container, .container--small {
-    padding: 73px 60px 87px 60px;
-  }
-}
-
-.container--small {
-  max-width: 980px;
 }
 
 header {
@@ -132,6 +100,81 @@ header a {
 header a:hover {
   text-decoration: underline;
   color: red;
+}
+
+.container, .container--small {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 25px 20px 100px 20px;
+}
+
+@media screen and (min-width: 999px) {
+  .container, .container--small {
+    padding: 73px 60px 87px 60px;
+  }
+}
+
+.container--small {
+  max-width: 980px;
+}
+
+button,
+.btn,
+button--large,
+.btn--large {
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(to right, #65e2d9, #339ecc);
+  font-size: 0.97rem;
+  text-align: center;
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 699px) {
+  button,
+  .btn,
+  button--large,
+  .btn--large {
+    max-width: 200px;
+  }
+}
+
+button:hover,
+.btn:hover,
+button--large:hover,
+.btn--large:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#339ecc), to(#65e2d9));
+  background: linear-gradient(to right, #339ecc, #65e2d9);
+}
+
+button--large,
+.btn--large {
+  padding: 20px;
+}
+
+@media screen and (min-width: 999px) {
+  button--large,
+  .btn--large {
+    max-width: 285px;
+  }
+}
+
+input {
+  font-family: "open sans", sans serif;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: none;
+  border-radius: 30px;
+  color: #0b1523;
+  outline: none;
+  font-size: .9rem;
+  padding: 17px 40px;
 }
 
 .hero {
@@ -382,8 +425,42 @@ header a:hover {
 }
 
 .signup__block {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.5);
   border: 1px solide red;
   background-color: #1b2330;
-  padding: 50px 80px 45px 80px;
+  padding: 45px 30px 45px 30px;
+  text-align: center;
+}
+
+@media screen and (min-width: 699px) {
+  .signup {
+    padding: 45px 60px 45px 60px;
+  }
+}
+
+@media screen and (min-width: 999px) {
+  .signup {
+    padding: 45px 80px 45px 80px;
+  }
+}
+
+.signup__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+@media screen and (min-width: 699px) {
+  .signup__form {
+    -ms-grid-columns: 1fr 200px;
+        grid-template-columns: 1fr 200px;
+    gap: 30px;
+    margin-top: 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

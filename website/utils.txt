@@ -1,5 +1,0 @@
-Hey everyone! I've just completed the "Base Apparel coming soon page" challenge.
-
-Here's a link to my solution: https://www.frontendmentor.io/solutions/responsive-landing-page-with-flex-box-jDuOZaFTj
-
-Any feedback and suggestions on how I can improve are very welcome!
