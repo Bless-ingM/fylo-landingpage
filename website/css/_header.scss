@@ -6,7 +6,6 @@ header{
         grid-template-columns:minmax(100px, 1fr) repeat(3, auto);
         align-items: center;
         grid-gap: 20px;
-        // background: #000;
     
 
             @include breakpoint (large){
@@ -33,7 +32,6 @@ header{
         }
         &:hover {
             text-decoration: underline;
-            color: red;
         }
     }
     
