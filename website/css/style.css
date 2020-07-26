@@ -358,6 +358,7 @@ input[type="email"] {
 }
 
 .quotes-grid {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -375,10 +376,35 @@ input[type="email"] {
   }
 }
 
+.quotes-grid:first-child:Before {
+  content: url("../images/bg-quotes.png");
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  top: -12px;
+  position: absolute;
+  left: 17px;
+  z-index: 0;
+}
+
+@media screen and (min-width: 999px) {
+  .quotes-grid:first-child:Before {
+    -webkit-transform: scale(none);
+            transform: scale(none);
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    width: 60px;
+    height: 45px;
+    z-index: 0;
+  }
+}
+
 .quotes .quote {
   background-color: #202a3c;
   padding: 30px 24px 24px 24px;
   border-radius: 5px;
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (min-width: 999px) {
@@ -479,6 +505,7 @@ input[type="email"] {
   background-color: #0b1523;
   font-size: 1rem;
   padding-top: 200px;
+  margin: 0;
 }
 
 .footer .container, .footer .container--small {
